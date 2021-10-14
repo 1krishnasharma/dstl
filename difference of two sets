@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long 
+#define fr(n) for(int i=0;i<n;i++)
+#define fo(a,b) for(int j=a,j<b;j++)
+#define vi vector<int>
+#define vl vector<long long>
+#define vc vector<char>
+#define mp map<int,int>
+bool present(int n,int b[],int size)
+{
+    fr(size)
+    {
+        if(n==b[i])
+        return true;
+    }
+    return false;
+}
+void sol()
+{
+    int  n;
+    cin>>n;
+    int a[n],b[n];
+    fr(n)
+    cin>>a[i];
+    fr(n)
+    cin>>b[i];
+    fr(n)
+    {
+        if(!present(a[i],b,n))
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+}
+int main() {
+    // int t;
+    // cin>>t;
+    // while(t--)
+    // {
+        sol();
+    // }
+	return 0;
+}
